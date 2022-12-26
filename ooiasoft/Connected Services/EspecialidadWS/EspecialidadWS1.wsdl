@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EspecialidadWS" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://34.231.200.155:8080/ooiasoftWebServices/EspecialidadWS?xsd=1" namespace="http://services.ooiasoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarEspecialidadesPorNombre">
+    <part name="parameters" element="tns:listarEspecialidadesPorNombre" />
+  </message>
+  <message name="listarEspecialidadesPorNombreResponse">
+    <part name="parameters" element="tns:listarEspecialidadesPorNombreResponse" />
+  </message>
+  <message name="eliminarEspecialidad">
+    <part name="parameters" element="tns:eliminarEspecialidad" />
+  </message>
+  <message name="eliminarEspecialidadResponse">
+    <part name="parameters" element="tns:eliminarEspecialidadResponse" />
+  </message>
+  <message name="insertarEspecialidad">
+    <part name="parameters" element="tns:insertarEspecialidad" />
+  </message>
+  <message name="insertarEspecialidadResponse">
+    <part name="parameters" element="tns:insertarEspecialidadResponse" />
+  </message>
+  <message name="modificarEspecialidad">
+    <part name="parameters" element="tns:modificarEspecialidad" />
+  </message>
+  <message name="modificarEspecialidadResponse">
+    <part name="parameters" element="tns:modificarEspecialidadResponse" />
+  </message>
+  <portType name="EspecialidadWS">
+    <operation name="listarEspecialidadesPorNombre">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EspecialidadWS/listarEspecialidadesPorNombreRequest" message="tns:listarEspecialidadesPorNombre" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EspecialidadWS/listarEspecialidadesPorNombreResponse" message="tns:listarEspecialidadesPorNombreResponse" />
+    </operation>
+    <operation name="eliminarEspecialidad">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EspecialidadWS/eliminarEspecialidadRequest" message="tns:eliminarEspecialidad" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EspecialidadWS/eliminarEspecialidadResponse" message="tns:eliminarEspecialidadResponse" />
+    </operation>
+    <operation name="insertarEspecialidad">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EspecialidadWS/insertarEspecialidadRequest" message="tns:insertarEspecialidad" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EspecialidadWS/insertarEspecialidadResponse" message="tns:insertarEspecialidadResponse" />
+    </operation>
+    <operation name="modificarEspecialidad">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EspecialidadWS/modificarEspecialidadRequest" message="tns:modificarEspecialidad" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EspecialidadWS/modificarEspecialidadResponse" message="tns:modificarEspecialidadResponse" />
+    </operation>
+  </portType>
+  <binding name="EspecialidadWSPortBinding" type="tns:EspecialidadWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarEspecialidadesPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEspecialidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEspecialidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEspecialidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EspecialidadWS">
+    <port name="EspecialidadWSPort" binding="tns:EspecialidadWSPortBinding">
+      <soap:address location="http://34.231.200.155:8080/ooiasoftWebServices/EspecialidadWS" />
+    </port>
+  </service>
+</definitions>

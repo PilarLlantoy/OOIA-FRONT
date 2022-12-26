@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="generarReporteCitasxPersonal" type="tns:generarReporteCitasxPersonal" />
+  <xs:element name="generarReporteCitasxPersonalResponse" type="tns:generarReporteCitasxPersonalResponse" />
+  <xs:element name="generarReporteEventosxCiclo" type="tns:generarReporteEventosxCiclo" />
+  <xs:element name="generarReporteEventosxCicloResponse" type="tns:generarReporteEventosxCicloResponse" />
+  <xs:complexType name="generarReporteCitasxPersonal">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteCitasxPersonalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteEventosxCiclo">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteEventosxCicloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

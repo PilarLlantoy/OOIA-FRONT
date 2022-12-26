@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="PersonaWS" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://34.231.200.155:8080/ooiasoftWebServices/PersonaWS?xsd=1" namespace="http://services.ooiasoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="buscarIDPersonaPorUsuarioPassword">
+    <part name="parameters" element="tns:buscarIDPersonaPorUsuarioPassword" />
+  </message>
+  <message name="buscarIDPersonaPorUsuarioPasswordResponse">
+    <part name="parameters" element="tns:buscarIDPersonaPorUsuarioPasswordResponse" />
+  </message>
+  <message name="listarAdministrativosPorCodigoNombre">
+    <part name="parameters" element="tns:listarAdministrativosPorCodigoNombre" />
+  </message>
+  <message name="listarAdministrativosPorCodigoNombreResponse">
+    <part name="parameters" element="tns:listarAdministrativosPorCodigoNombreResponse" />
+  </message>
+  <message name="eliminarTutor">
+    <part name="parameters" element="tns:eliminarTutor" />
+  </message>
+  <message name="eliminarTutorResponse">
+    <part name="parameters" element="tns:eliminarTutorResponse" />
+  </message>
+  <message name="buscarTutorPorID">
+    <part name="parameters" element="tns:buscarTutorPorID" />
+  </message>
+  <message name="buscarTutorPorIDResponse">
+    <part name="parameters" element="tns:buscarTutorPorIDResponse" />
+  </message>
+  <message name="eliminarAlumno">
+    <part name="parameters" element="tns:eliminarAlumno" />
+  </message>
+  <message name="eliminarAlumnoResponse">
+    <part name="parameters" element="tns:eliminarAlumnoResponse" />
+  </message>
+  <message name="modificarTutor">
+    <part name="parameters" element="tns:modificarTutor" />
+  </message>
+  <message name="modificarTutorResponse">
+    <part name="parameters" element="tns:modificarTutorResponse" />
+  </message>
+  <message name="insertarTutor">
+    <part name="parameters" element="tns:insertarTutor" />
+  </message>
+  <message name="insertarTutorResponse">
+    <part name="parameters" element="tns:insertarTutorResponse" />
+  </message>
+  <message name="modificarPersona">
+    <part name="parameters" element="tns:modificarPersona" />
+  </message>
+  <message name="modificarPersonaResponse">
+    <part name="parameters" element="tns:modificarPersonaResponse" />
+  </message>
+  <message name="insertarAlumno">
+    <part name="parameters" element="tns:insertarAlumno" />
+  </message>
+  <message name="insertarAlumnoResponse">
+    <part name="parameters" element="tns:insertarAlumnoResponse" />
+  </message>
+  <message name="buscarAlumnoPorID">
+    <part name="parameters" element="tns:buscarAlumnoPorID" />
+  </message>
+  <message name="buscarAlumnoPorIDResponse">
+    <part name="parameters" element="tns:buscarAlumnoPorIDResponse" />
+  </message>
+  <message name="modificarDatosPersonales">
+    <part name="parameters" element="tns:modificarDatosPersonales" />
+  </message>
+  <message name="modificarDatosPersonalesResponse">
+    <part name="parameters" element="tns:modificarDatosPersonalesResponse" />
+  </message>
+  <message name="eliminarAsignadosCiclo">
+    <part name="parameters" element="tns:eliminarAsignadosCiclo" />
+  </message>
+  <message name="eliminarAsignadosCicloResponse">
+    <part name="parameters" element="tns:eliminarAsignadosCicloResponse" />
+  </message>
+  <message name="eliminarPsicologo">
+    <part name="parameters" element="tns:eliminarPsicologo" />
+  </message>
+  <message name="eliminarPsicologoResponse">
+    <part name="parameters" element="tns:eliminarPsicologoResponse" />
+  </message>
+  <message name="modificarCiclosCursosNotas">
+    <part name="parameters" element="tns:modificarCiclosCursosNotas" />
+  </message>
+  <message name="modificarCiclosCursosNotasResponse">
+    <part name="parameters" element="tns:modificarCiclosCursosNotasResponse" />
+  </message>
+  <message name="buscarTipoPersonaPorIDPersona">
+    <part name="parameters" element="tns:buscarTipoPersonaPorIDPersona" />
+  </message>
+  <message name="buscarTipoPersonaPorIDPersonaResponse">
+    <part name="parameters" element="tns:buscarTipoPersonaPorIDPersonaResponse" />
+  </message>
+  <message name="listarTutoresPorCodigoNombre">
+    <part name="parameters" element="tns:listarTutoresPorCodigoNombre" />
+  </message>
+  <message name="listarTutoresPorCodigoNombreResponse">
+    <part name="parameters" element="tns:listarTutoresPorCodigoNombreResponse" />
+  </message>
+  <message name="buscarIDPersonaPorCodigoCorreo">
+    <part name="parameters" element="tns:buscarIDPersonaPorCodigoCorreo" />
+  </message>
+  <message name="buscarIDPersonaPorCodigoCorreoResponse">
+    <part name="parameters" element="tns:buscarIDPersonaPorCodigoCorreoResponse" />
+  </message>
+  <message name="listarPsicologosPorCodigoNombre">
+    <part name="parameters" element="tns:listarPsicologosPorCodigoNombre" />
+  </message>
+  <message name="listarPsicologosPorCodigoNombreResponse">
+    <part name="parameters" element="tns:listarPsicologosPorCodigoNombreResponse" />
+  </message>
+  <message name="modificarAsignadosCiclo">
+    <part name="parameters" element="tns:modificarAsignadosCiclo" />
+  </message>
+  <message name="modificarAsignadosCicloResponse">
+    <part name="parameters" element="tns:modificarAsignadosCicloResponse" />
+  </message>
+  <message name="buscarPsicologoPorID">
+    <part name="parameters" element="tns:buscarPsicologoPorID" />
+  </message>
+  <message name="buscarPsicologoPorIDResponse">
+    <part name="parameters" element="tns:buscarPsicologoPorIDResponse" />
+  </message>
+  <message name="insertarAdministrativo">
+    <part name="parameters" element="tns:insertarAdministrativo" />
+  </message>
+  <message name="insertarAdministrativoResponse">
+    <part name="parameters" element="tns:insertarAdministrativoResponse" />
+  </message>
+  <message name="insertarAsignadosCiclo">
+    <part name="parameters" element="tns:insertarAsignadosCiclo" />
+  </message>
+  <message name="insertarAsignadosCicloResponse">
+    <part name="parameters" element="tns:insertarAsignadosCicloResponse" />
+  </message>
+  <message name="listarAlumnosPorCodigoONombre">
+    <part name="parameters" element="tns:listarAlumnosPorCodigoONombre" />
+  </message>
+  <message name="listarAlumnosPorCodigoONombreResponse">
+    <part name="parameters" element="tns:listarAlumnosPorCodigoONombreResponse" />
+  </message>
+  <message name="eliminarAdministrativo">
+    <part name="parameters" element="tns:eliminarAdministrativo" />
+  </message>
+  <message name="eliminarAdministrativoResponse">
+    <part name="parameters" element="tns:eliminarAdministrativoResponse" />
+  </message>
+  <message name="listarAsignadosPorIDTutor">
+    <part name="parameters" element="tns:listarAsignadosPorIDTutor" />
+  </message>
+  <message name="listarAsignadosPorIDTutorResponse">
+    <part name="parameters" element="tns:listarAsignadosPorIDTutorResponse" />
+  </message>
+  <message name="modificarAdministrativo">
+    <part name="parameters" element="tns:modificarAdministrativo" />
+  </message>
+  <message name="modificarAdministrativoResponse">
+    <part name="parameters" element="tns:modificarAdministrativoResponse" />
+  </message>
+  <message name="buscarAdministrativoPorID">
+    <part name="parameters" element="tns:buscarAdministrativoPorID" />
+  </message>
+  <message name="buscarAdministrativoPorIDResponse">
+    <part name="parameters" element="tns:buscarAdministrativoPorIDResponse" />
+  </message>
+  <message name="modificarPsicologo">
+    <part name="parameters" element="tns:modificarPsicologo" />
+  </message>
+  <message name="modificarPsicologoResponse">
+    <part name="parameters" element="tns:modificarPsicologoResponse" />
+  </message>
+  <message name="insertarPsicologo">
+    <part name="parameters" element="tns:insertarPsicologo" />
+  </message>
+  <message name="insertarPsicologoResponse">
+    <part name="parameters" element="tns:insertarPsicologoResponse" />
+  </message>
+  <portType name="PersonaWS">
+    <operation name="buscarIDPersonaPorUsuarioPassword">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarIDPersonaPorUsuarioPasswordRequest" message="tns:buscarIDPersonaPorUsuarioPassword" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarIDPersonaPorUsuarioPasswordResponse" message="tns:buscarIDPersonaPorUsuarioPasswordResponse" />
+    </operation>
+    <operation name="listarAdministrativosPorCodigoNombre">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarAdministrativosPorCodigoNombreRequest" message="tns:listarAdministrativosPorCodigoNombre" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarAdministrativosPorCodigoNombreResponse" message="tns:listarAdministrativosPorCodigoNombreResponse" />
+    </operation>
+    <operation name="eliminarTutor">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarTutorRequest" message="tns:eliminarTutor" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarTutorResponse" message="tns:eliminarTutorResponse" />
+    </operation>
+    <operation name="buscarTutorPorID">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarTutorPorIDRequest" message="tns:buscarTutorPorID" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarTutorPorIDResponse" message="tns:buscarTutorPorIDResponse" />
+    </operation>
+    <operation name="eliminarAlumno">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
+    </operation>
+    <operation name="modificarTutor">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarTutorRequest" message="tns:modificarTutor" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarTutorResponse" message="tns:modificarTutorResponse" />
+    </operation>
+    <operation name="insertarTutor">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarTutorRequest" message="tns:insertarTutor" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarTutorResponse" message="tns:insertarTutorResponse" />
+    </operation>
+    <operation name="modificarPersona">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarPersonaRequest" message="tns:modificarPersona" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarPersonaResponse" message="tns:modificarPersonaResponse" />
+    </operation>
+    <operation name="insertarAlumno">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarAlumnoRequest" message="tns:insertarAlumno" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarAlumnoResponse" message="tns:insertarAlumnoResponse" />
+    </operation>
+    <operation name="buscarAlumnoPorID">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarAlumnoPorIDRequest" message="tns:buscarAlumnoPorID" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarAlumnoPorIDResponse" message="tns:buscarAlumnoPorIDResponse" />
+    </operation>
+    <operation name="modificarDatosPersonales">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarDatosPersonalesRequest" message="tns:modificarDatosPersonales" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarDatosPersonalesResponse" message="tns:modificarDatosPersonalesResponse" />
+    </operation>
+    <operation name="eliminarAsignadosCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarAsignadosCicloRequest" message="tns:eliminarAsignadosCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarAsignadosCicloResponse" message="tns:eliminarAsignadosCicloResponse" />
+    </operation>
+    <operation name="eliminarPsicologo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarPsicologoRequest" message="tns:eliminarPsicologo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarPsicologoResponse" message="tns:eliminarPsicologoResponse" />
+    </operation>
+    <operation name="modificarCiclosCursosNotas">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarCiclosCursosNotasRequest" message="tns:modificarCiclosCursosNotas" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarCiclosCursosNotasResponse" message="tns:modificarCiclosCursosNotasResponse" />
+    </operation>
+    <operation name="buscarTipoPersonaPorIDPersona">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarTipoPersonaPorIDPersonaRequest" message="tns:buscarTipoPersonaPorIDPersona" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarTipoPersonaPorIDPersonaResponse" message="tns:buscarTipoPersonaPorIDPersonaResponse" />
+    </operation>
+    <operation name="listarTutoresPorCodigoNombre">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarTutoresPorCodigoNombreRequest" message="tns:listarTutoresPorCodigoNombre" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarTutoresPorCodigoNombreResponse" message="tns:listarTutoresPorCodigoNombreResponse" />
+    </operation>
+    <operation name="buscarIDPersonaPorCodigoCorreo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarIDPersonaPorCodigoCorreoRequest" message="tns:buscarIDPersonaPorCodigoCorreo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarIDPersonaPorCodigoCorreoResponse" message="tns:buscarIDPersonaPorCodigoCorreoResponse" />
+    </operation>
+    <operation name="listarPsicologosPorCodigoNombre">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarPsicologosPorCodigoNombreRequest" message="tns:listarPsicologosPorCodigoNombre" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarPsicologosPorCodigoNombreResponse" message="tns:listarPsicologosPorCodigoNombreResponse" />
+    </operation>
+    <operation name="modificarAsignadosCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarAsignadosCicloRequest" message="tns:modificarAsignadosCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarAsignadosCicloResponse" message="tns:modificarAsignadosCicloResponse" />
+    </operation>
+    <operation name="buscarPsicologoPorID">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarPsicologoPorIDRequest" message="tns:buscarPsicologoPorID" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarPsicologoPorIDResponse" message="tns:buscarPsicologoPorIDResponse" />
+    </operation>
+    <operation name="insertarAdministrativo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarAdministrativoRequest" message="tns:insertarAdministrativo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarAdministrativoResponse" message="tns:insertarAdministrativoResponse" />
+    </operation>
+    <operation name="insertarAsignadosCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarAsignadosCicloRequest" message="tns:insertarAsignadosCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarAsignadosCicloResponse" message="tns:insertarAsignadosCicloResponse" />
+    </operation>
+    <operation name="listarAlumnosPorCodigoONombre">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarAlumnosPorCodigoONombreRequest" message="tns:listarAlumnosPorCodigoONombre" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarAlumnosPorCodigoONombreResponse" message="tns:listarAlumnosPorCodigoONombreResponse" />
+    </operation>
+    <operation name="eliminarAdministrativo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarAdministrativoRequest" message="tns:eliminarAdministrativo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/eliminarAdministrativoResponse" message="tns:eliminarAdministrativoResponse" />
+    </operation>
+    <operation name="listarAsignadosPorIDTutor">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarAsignadosPorIDTutorRequest" message="tns:listarAsignadosPorIDTutor" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/listarAsignadosPorIDTutorResponse" message="tns:listarAsignadosPorIDTutorResponse" />
+    </operation>
+    <operation name="modificarAdministrativo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarAdministrativoRequest" message="tns:modificarAdministrativo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarAdministrativoResponse" message="tns:modificarAdministrativoResponse" />
+    </operation>
+    <operation name="buscarAdministrativoPorID">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarAdministrativoPorIDRequest" message="tns:buscarAdministrativoPorID" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/buscarAdministrativoPorIDResponse" message="tns:buscarAdministrativoPorIDResponse" />
+    </operation>
+    <operation name="modificarPsicologo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarPsicologoRequest" message="tns:modificarPsicologo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/modificarPsicologoResponse" message="tns:modificarPsicologoResponse" />
+    </operation>
+    <operation name="insertarPsicologo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarPsicologoRequest" message="tns:insertarPsicologo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/PersonaWS/insertarPsicologoResponse" message="tns:insertarPsicologoResponse" />
+    </operation>
+  </portType>
+  <binding name="PersonaWSPortBinding" type="tns:PersonaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="buscarIDPersonaPorUsuarioPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAdministrativosPorCodigoNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarTutorPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarTutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarAlumnoPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarDatosPersonales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAsignadosCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCiclosCursosNotas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarTipoPersonaPorIDPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTutoresPorCodigoNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarIDPersonaPorCodigoCorreo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPsicologosPorCodigoNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAsignadosCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarPsicologoPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAdministrativo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAsignadosCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumnosPorCodigoONombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAdministrativo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAsignadosPorIDTutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAdministrativo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarAdministrativoPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PersonaWS">
+    <port name="PersonaWSPort" binding="tns:PersonaWSPortBinding">
+      <soap:address location="http://34.231.200.155:8080/ooiasoftWebServices/PersonaWS" />
+    </port>
+  </service>
+</definitions>

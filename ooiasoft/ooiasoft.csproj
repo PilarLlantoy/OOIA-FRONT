@@ -1,0 +1,1175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A31A9853-6860-464F-9866-C1A2540967CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ooiasoft</RootNamespace>
+    <AssemblyName>ooiasoft</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="advancedTxtBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="advancedTxtBox.Designer.cs">
+      <DependentUpon>advancedTxtBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeautyTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeautyTextBox.Designer.cs">
+      <DependentUpon>BeautyTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CicloWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CitaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CursoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EspecialidadWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EventoCicloWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\HorarioCicloWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\InformacionTemaCicloWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PersonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ReporteWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="editarEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editarEvento.Designer.cs">
+      <DependentUpon>editarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estado.cs" />
+    <Compile Include="FilaDetalleLista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FilaDetalleLista.Designer.cs">
+      <DependentUpon>FilaDetalleLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarModificarAdministrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarModificarAdministrativo.Designer.cs">
+      <DependentUpon>frmAgregarModificarAdministrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarDescripcionInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmEditarDescripcionInfo.designer.cs">
+      <DependentUpon>frmEditarDescripcionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarEliminarTema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarEliminarTema.Designer.cs">
+      <DependentUpon>frmEditarEliminarTema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformacionAdministrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformacionAdministrativo.Designer.cs">
+      <DependentUpon>frmInformacionAdministrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformacionCitaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformacionCitaAlumno.Designer.cs">
+      <DependentUpon>frmInformacionCitaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformacionCitaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformacionCitaPersonal.designer.cs">
+      <DependentUpon>frmInformacionCitaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInspeccionarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInspeccionarAlumno.Designer.cs">
+      <DependentUpon>frmInspeccionarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMostrarDescripcionInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMostrarDescripcionInfo.designer.cs">
+      <DependentUpon>frmMostrarDescripcionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMostrarDetalleNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarDetalleNotas.Designer.cs">
+      <DependentUpon>frmMostrarDetalleNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOOIA.Designer.cs">
+      <DependentUpon>frmOOIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecuperarContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecuperarContra.Designer.cs">
+      <DependentUpon>frmRecuperarContra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerEditarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerEditarAlumno.designer.cs">
+      <DependentUpon>frmVerEditarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarAlumno.Designer.cs">
+      <DependentUpon>frmAgregarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarInformacion.designer.cs">
+      <DependentUpon>frmAgregarInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarModificarPsicologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarModificarPsicologo.Designer.cs">
+      <DependentUpon>frmAgregarModificarPsicologo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarTema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarTema.designer.cs">
+      <DependentUpon>frmAgregarTema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarModificarTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarModificarTutor.Designer.cs">
+      <DependentUpon>frmAgregarModificarTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlumnoEventosOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlumnoEventosOpciones.Designer.cs">
+      <DependentUpon>frmAlumnoEventosOpciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlumnoMisEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlumnoMisEventos.Designer.cs">
+      <DependentUpon>frmAlumnoMisEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlumnosAdministrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlumnosAdministrativo.designer.cs">
+      <DependentUpon>frmAlumnosAdministrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitasProgramadasAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitasProgramadasAlumno.Designer.cs">
+      <DependentUpon>frmCitasProgramadasAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitas.Designer.cs">
+      <DependentUpon>frmCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitasProgramadasPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitasProgramadasPersonal.Designer.cs">
+      <DependentUpon>frmCitasProgramadasPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCursoAlumno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmCursoAlumno.designer.cs">
+      <DependentUpon>frmCursoAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetallesNotaAlumno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDetallesNotaAlumno.designer.cs">
+      <DependentUpon>frmDetallesNotaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisponibilidad.designer.cs">
+      <DependentUpon>frmDisponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormatoArchivoCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormatoArchivoCursos.designer.cs">
+      <DependentUpon>frmFormatoArchivoCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarPersonal.Designer.cs">
+      <DependentUpon>frmGestionarPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoPersonal.Designer.cs">
+      <DependentUpon>frmNuevoPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroNotas.designer.cs">
+      <DependentUpon>frmRegistroNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReservarCitaPersonalAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReservarCitaPersonalAlumno.designer.cs">
+      <DependentUpon>frmReservarCitaPersonalAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionarDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionarDisponibilidad.designer.cs">
+      <DependentUpon>frmSeleccionarDisponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTutorAlumnosAsignados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTutorAlumnosAsignados.Designer.cs">
+      <DependentUpon>frmTutorAlumnosAsignados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracionCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracionCuenta.Designer.cs">
+      <DependentUpon>frmConfiguracionCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDescripcionEventoAlumno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDescripcionEventoAlumno.Designer.cs">
+      <DependentUpon>frmDescripcionEventoAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEventosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEventosAdmin.Designer.cs">
+      <DependentUpon>frmEventosAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEventosAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEventosAlumno.Designer.cs">
+      <DependentUpon>frmEventosAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarAlumnos.Designer.cs">
+      <DependentUpon>frmGestionarAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformacionEventoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformacionEventoAlumno.Designer.cs">
+      <DependentUpon>frmInformacionEventoAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIniciarSesion.Designer.cs">
+      <DependentUpon>frmIniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicioAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioAlumno.Designer.cs">
+      <DependentUpon>frmInicioAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonalCitas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmPersonalCitas.Designer.cs">
+      <DependentUpon>frmPersonalCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerPerfil.designer.cs">
+      <DependentUpon>frmVerPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarVideo.Designer.cs">
+      <DependentUpon>frmVisualizarVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarModificarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarModificarEvento.Designer.cs">
+      <DependentUpon>frmAgregarModificarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReservarCitaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReservarCitaAlumno.Designer.cs">
+      <DependentUpon>frmReservarCitaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerInscritosEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerInscritosEvento.Designer.cs">
+      <DependentUpon>frmVerInscritosEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioAdmin - Copia.Designer.cs">
+      <DependentUpon>InicioPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioAdmin.Designer.cs">
+      <DependentUpon>InicioAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyCalendar.Designer.cs">
+      <DependentUpon>MyCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="previsualizarCargaAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="previsualizarCargaAlumnos.Designer.cs">
+      <DependentUpon>previsualizarCargaAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="previsualizarCargaNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="previsualizarCargaNotas.Designer.cs">
+      <DependentUpon>previsualizarCargaNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="previsualizarCargaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="previsualizarCargaPersonal.Designer.cs">
+      <DependentUpon>previsualizarCargaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs" />
+    <Compile Include="ProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBar.Designer.cs">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="advancedTxtBox.resx">
+      <DependentUpon>advancedTxtBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeautyTextBox.resx">
+      <DependentUpon>BeautyTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editarEvento.resx">
+      <DependentUpon>editarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilaDetalleLista.resx">
+      <DependentUpon>FilaDetalleLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarModificarAdministrativo.resx">
+      <DependentUpon>frmAgregarModificarAdministrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarDescripcionInfo.resx">
+      <DependentUpon>frmEditarDescripcionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarEliminarTema.resx">
+      <DependentUpon>frmEditarEliminarTema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformacionAdministrativo.resx">
+      <DependentUpon>frmInformacionAdministrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformacionCitaAlumno.resx">
+      <DependentUpon>frmInformacionCitaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformacionCitaPersonal.resx">
+      <DependentUpon>frmInformacionCitaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInspeccionarAlumno.resx">
+      <DependentUpon>frmInspeccionarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarDescripcionInfo.resx">
+      <DependentUpon>frmMostrarDescripcionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarDetalleNotas.resx">
+      <DependentUpon>frmMostrarDetalleNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOOIA.resx">
+      <DependentUpon>frmOOIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecuperarContra.resx">
+      <DependentUpon>frmRecuperarContra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerEditarAlumno.resx">
+      <DependentUpon>frmVerEditarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarAlumno.resx">
+      <DependentUpon>frmAgregarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarInformacion.resx">
+      <DependentUpon>frmAgregarInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarModificarPsicologo.resx">
+      <DependentUpon>frmAgregarModificarPsicologo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarTema.resx">
+      <DependentUpon>frmAgregarTema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarModificarTutor.resx">
+      <DependentUpon>frmAgregarModificarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlumnoEventosOpciones.resx">
+      <DependentUpon>frmAlumnoEventosOpciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlumnoMisEventos.resx">
+      <DependentUpon>frmAlumnoMisEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlumnosAdministrativo.resx">
+      <DependentUpon>frmAlumnosAdministrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitasProgramadasAlumno.resx">
+      <DependentUpon>frmCitasProgramadasAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitas.resx">
+      <DependentUpon>frmCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitasProgramadasPersonal.resx">
+      <DependentUpon>frmCitasProgramadasPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCursoAlumno.resx">
+      <DependentUpon>frmCursoAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetallesNotaAlumno.resx">
+      <DependentUpon>frmDetallesNotaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisponibilidad.resx">
+      <DependentUpon>frmDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormatoArchivoCursos.resx">
+      <DependentUpon>frmFormatoArchivoCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarPersonal.resx">
+      <DependentUpon>frmGestionarPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoPersonal.resx">
+      <DependentUpon>frmNuevoPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroNotas.resx">
+      <DependentUpon>frmRegistroNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReservarCitaPersonalAlumno.resx">
+      <DependentUpon>frmReservarCitaPersonalAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionarDisponibilidad.resx">
+      <DependentUpon>frmSeleccionarDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTutorAlumnosAsignados.resx">
+      <DependentUpon>frmTutorAlumnosAsignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracionCuenta.resx">
+      <DependentUpon>frmConfiguracionCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDescripcionEventoAlumno.resx">
+      <DependentUpon>frmDescripcionEventoAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEventosAdmin.resx">
+      <DependentUpon>frmEventosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEventosAlumno.resx">
+      <DependentUpon>frmEventosAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarAlumnos.resx">
+      <DependentUpon>frmGestionarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformacionEventoAlumno.resx">
+      <DependentUpon>frmInformacionEventoAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIniciarSesion.resx">
+      <DependentUpon>frmIniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioAlumno.resx">
+      <DependentUpon>frmInicioAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonalCitas.resx">
+      <DependentUpon>frmPersonalCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerPerfil.resx">
+      <DependentUpon>frmVerPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarVideo.resx">
+      <DependentUpon>frmVisualizarVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarModificarEvento.resx">
+      <DependentUpon>frmAgregarModificarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReservarCitaAlumno.resx">
+      <DependentUpon>frmReservarCitaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerInscritosEvento.resx">
+      <DependentUpon>frmVerInscritosEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioAdmin.resx">
+      <DependentUpon>InicioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioPersonal.resx">
+      <DependentUpon>InicioPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="previsualizarCargaAlumnos.resx">
+      <DependentUpon>previsualizarCargaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="previsualizarCargaNotas.resx">
+      <DependentUpon>previsualizarCargaNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="previsualizarCargaPersonal.resx">
+      <DependentUpon>previsualizarCargaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\CicloWS\CicloWS1.wsdl" />
+    <None Include="Connected Services\CicloWS\CicloWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CicloWS\ooiasoft.CicloWS.ciclo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CicloWS\ooiasoft.CicloWS.eliminarCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CicloWS\ooiasoft.CicloWS.insertarCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CicloWS\ooiasoft.CicloWS.listarCiclosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CicloWS\ooiasoft.CicloWS.modificarCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\CitaWS1.wsdl" />
+    <None Include="Connected Services\CitaWS\CitaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.cita.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.eliminarCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.eliminarMotivoCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.insertarCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.insertarMotivoCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.listarCitasDeAlumnoPorCicloFechaPersonalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.listarCitasDePersonalPorCicloFechaAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.listarMotivosCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.modificarCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.modificarMotivoCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitaWS\ooiasoft.CitaWS.motivoCita.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\CursoWS1.wsdl" />
+    <None Include="Connected Services\CursoWS\CursoWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CursoWS\ooiasoft.CursoWS.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\ooiasoft.CursoWS.eliminarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\ooiasoft.CursoWS.insertarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\ooiasoft.CursoWS.listarCursosPorCodigoNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\ooiasoft.CursoWS.modificarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.wsdl" />
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EspecialidadWS\ooiasoft.EspecialidadWS.eliminarEspecialidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialidadWS\ooiasoft.EspecialidadWS.especialidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialidadWS\ooiasoft.EspecialidadWS.insertarEspecialidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialidadWS\ooiasoft.EspecialidadWS.listarEspecialidadesPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialidadWS\ooiasoft.EspecialidadWS.modificarEspecialidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\EventoCicloWS1.wsdl" />
+    <None Include="Connected Services\EventoCicloWS\EventoCicloWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.desinscribirAlumnoEventoCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.eliminarEventoCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.eventoCiclo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.inscribirAlumnoEventoCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.insertarEventoCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.listarEventoCiclosInscritosParaAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.listarEventoCiclosNoInscritosParaAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.listarEventoCiclosParaAdministrativoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoCicloWS\ooiasoft.EventoCicloWS.modificarEventoCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCicloWS\HorarioCicloWS1.wsdl" />
+    <None Include="Connected Services\HorarioCicloWS\HorarioCicloWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HorarioCicloWS\ooiasoft.HorarioCicloWS.eliminarHorarioCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCicloWS\ooiasoft.HorarioCicloWS.horarioCiclo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCicloWS\ooiasoft.HorarioCicloWS.insertarHorarioCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCicloWS\ooiasoft.HorarioCicloWS.listarHorarioCiclosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCicloWS\ooiasoft.HorarioCicloWS.modificarHorarioCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\InformacionTemaCicloWS.wsdl" />
+    <None Include="Connected Services\InformacionTemaCicloWS\InformacionTemaCicloWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.eliminarInformacionTemaCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.eliminarTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.informacionTemaCiclo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.insertarInformacionTemaCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.insertarTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.listarInformacionesTemaCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.listarTemasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.modificarInformacionTemaCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.modificarTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\ooiasoft.InformacionTemaCicloWS.tema.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.administrativo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.asignadosCiclo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.buscarAdministrativoPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.buscarAlumnoPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.buscarIDPersonaPorCodigoCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.buscarIDPersonaPorUsuarioPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.buscarPsicologoPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.buscarTipoPersonaPorIDPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.buscarTutorPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.eliminarAdministrativoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.eliminarAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.eliminarAsignadosCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.eliminarPsicologoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.eliminarTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.insertarAdministrativoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.insertarAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.insertarAsignadosCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.insertarPsicologoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.insertarTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.listarAdministrativosPorCodigoNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.listarAlumnosPorCodigoONombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.listarAsignadosPorIDTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.listarPsicologosPorCodigoNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.listarTutoresPorCodigoNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.modificarAdministrativoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.modificarAsignadosCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.modificarCiclosCursosNotasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.modificarDatosPersonalesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.modificarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.modificarPsicologoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.modificarTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.psicologo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\ooiasoft.PersonaWS.tutor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaWS\PersonaWS1.wsdl" />
+    <None Include="Connected Services\PersonaWS\PersonaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReporteWS\ooiasoft.ReporteWS.generarReporteCitasxPersonalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\ooiasoft.ReporteWS.generarReporteEventosxCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\rotonda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\pucpLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ooiaLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\citas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\informacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\paperPlane.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pregunta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\paleta-de-pintura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\imagen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CicloWS\" />
+    <WCFMetadataStorage Include="Connected Services\CitaWS\" />
+    <WCFMetadataStorage Include="Connected Services\CursoWS\" />
+    <WCFMetadataStorage Include="Connected Services\EspecialidadWS\" />
+    <WCFMetadataStorage Include="Connected Services\EventoCicloWS\" />
+    <WCFMetadataStorage Include="Connected Services\HorarioCicloWS\" />
+    <WCFMetadataStorage Include="Connected Services\InformacionTemaCicloWS\" />
+    <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CicloWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CicloWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CicloWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HorarioCicloWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HorarioCicloWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HorarioCicloWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CursoWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CursoWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CursoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EspecialidadWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EspecialidadWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EspecialidadWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CitaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CitaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CitaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EventoCicloWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EventoCicloWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EventoCicloWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ReporteWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\InformacionTemaCicloWS\configuration91.svcinfo" />
+    <None Include="Connected Services\InformacionTemaCicloWS\configuration.svcinfo" />
+    <None Include="Connected Services\InformacionTemaCicloWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\recuperar_contra.png" />
+    <None Include="Resources\eeggggg.jpg" />
+    <None Include="Resources\eeggcc.jpg" />
+    <Content Include="Resources\font.png" />
+    <None Include="Resources\oooiaGAA.jpg" />
+    <None Include="Resources\oiasd.jpg" />
+    <None Include="Resources\ooiaBANNER.png" />
+    <Content Include="Resources\paleta-de-pintura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

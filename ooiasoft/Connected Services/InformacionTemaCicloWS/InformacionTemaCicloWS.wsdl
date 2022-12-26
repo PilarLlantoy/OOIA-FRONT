@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="InformacionTemaCicloWS" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://34.231.200.155:8080/ooiasoftWebServices/InformacionTemaCicloWS?xsd=1" namespace="http://services.ooiasoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="modificarTema">
+    <part name="parameters" element="tns:modificarTema" />
+  </message>
+  <message name="modificarTemaResponse">
+    <part name="parameters" element="tns:modificarTemaResponse" />
+  </message>
+  <message name="insertarTema">
+    <part name="parameters" element="tns:insertarTema" />
+  </message>
+  <message name="insertarTemaResponse">
+    <part name="parameters" element="tns:insertarTemaResponse" />
+  </message>
+  <message name="eliminarTema">
+    <part name="parameters" element="tns:eliminarTema" />
+  </message>
+  <message name="eliminarTemaResponse">
+    <part name="parameters" element="tns:eliminarTemaResponse" />
+  </message>
+  <message name="listarTemas">
+    <part name="parameters" element="tns:listarTemas" />
+  </message>
+  <message name="listarTemasResponse">
+    <part name="parameters" element="tns:listarTemasResponse" />
+  </message>
+  <message name="eliminarInformacionTemaCiclo">
+    <part name="parameters" element="tns:eliminarInformacionTemaCiclo" />
+  </message>
+  <message name="eliminarInformacionTemaCicloResponse">
+    <part name="parameters" element="tns:eliminarInformacionTemaCicloResponse" />
+  </message>
+  <message name="insertarInformacionTemaCiclo">
+    <part name="parameters" element="tns:insertarInformacionTemaCiclo" />
+  </message>
+  <message name="insertarInformacionTemaCicloResponse">
+    <part name="parameters" element="tns:insertarInformacionTemaCicloResponse" />
+  </message>
+  <message name="listarInformacionesTemaCiclo">
+    <part name="parameters" element="tns:listarInformacionesTemaCiclo" />
+  </message>
+  <message name="listarInformacionesTemaCicloResponse">
+    <part name="parameters" element="tns:listarInformacionesTemaCicloResponse" />
+  </message>
+  <message name="modificarInformacionTemaCiclo">
+    <part name="parameters" element="tns:modificarInformacionTemaCiclo" />
+  </message>
+  <message name="modificarInformacionTemaCicloResponse">
+    <part name="parameters" element="tns:modificarInformacionTemaCicloResponse" />
+  </message>
+  <portType name="InformacionTemaCicloWS">
+    <operation name="modificarTema">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/modificarTemaRequest" message="tns:modificarTema" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/modificarTemaResponse" message="tns:modificarTemaResponse" />
+    </operation>
+    <operation name="insertarTema">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/insertarTemaRequest" message="tns:insertarTema" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/insertarTemaResponse" message="tns:insertarTemaResponse" />
+    </operation>
+    <operation name="eliminarTema">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/eliminarTemaRequest" message="tns:eliminarTema" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/eliminarTemaResponse" message="tns:eliminarTemaResponse" />
+    </operation>
+    <operation name="listarTemas">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/listarTemasRequest" message="tns:listarTemas" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/listarTemasResponse" message="tns:listarTemasResponse" />
+    </operation>
+    <operation name="eliminarInformacionTemaCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/eliminarInformacionTemaCicloRequest" message="tns:eliminarInformacionTemaCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/eliminarInformacionTemaCicloResponse" message="tns:eliminarInformacionTemaCicloResponse" />
+    </operation>
+    <operation name="insertarInformacionTemaCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/insertarInformacionTemaCicloRequest" message="tns:insertarInformacionTemaCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/insertarInformacionTemaCicloResponse" message="tns:insertarInformacionTemaCicloResponse" />
+    </operation>
+    <operation name="listarInformacionesTemaCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/listarInformacionesTemaCicloRequest" message="tns:listarInformacionesTemaCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/listarInformacionesTemaCicloResponse" message="tns:listarInformacionesTemaCicloResponse" />
+    </operation>
+    <operation name="modificarInformacionTemaCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/modificarInformacionTemaCicloRequest" message="tns:modificarInformacionTemaCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/InformacionTemaCicloWS/modificarInformacionTemaCicloResponse" message="tns:modificarInformacionTemaCicloResponse" />
+    </operation>
+  </portType>
+  <binding name="InformacionTemaCicloWSPortBinding" type="tns:InformacionTemaCicloWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="modificarTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTemas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarInformacionTemaCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarInformacionTemaCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarInformacionesTemaCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarInformacionTemaCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="InformacionTemaCicloWS">
+    <port name="InformacionTemaCicloWSPort" binding="tns:InformacionTemaCicloWSPortBinding">
+      <soap:address location="http://34.231.200.155:8080/ooiasoftWebServices/InformacionTemaCicloWS" />
+    </port>
+  </service>
+</definitions>

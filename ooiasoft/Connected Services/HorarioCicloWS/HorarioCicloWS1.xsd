@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarHorarioCiclo" type="tns:eliminarHorarioCiclo" />
+  <xs:element name="eliminarHorarioCicloResponse" type="tns:eliminarHorarioCicloResponse" />
+  <xs:element name="insertarHorarioCiclo" type="tns:insertarHorarioCiclo" />
+  <xs:element name="insertarHorarioCicloResponse" type="tns:insertarHorarioCicloResponse" />
+  <xs:element name="listarHorarioCiclos" type="tns:listarHorarioCiclos" />
+  <xs:element name="listarHorarioCiclosResponse" type="tns:listarHorarioCiclosResponse" />
+  <xs:element name="modificarHorarioCiclo" type="tns:modificarHorarioCiclo" />
+  <xs:element name="modificarHorarioCicloResponse" type="tns:modificarHorarioCicloResponse" />
+  <xs:complexType name="listarHorarioCiclos">
+    <xs:sequence>
+      <xs:element name="idPersonalCitas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarHorarioCiclosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:horarioCiclo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horarioCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ciclo" type="tns:ciclo" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="horario" nillable="true" type="tns:detalleHorario" />
+      <xs:element name="horasAtendidas" type="xs:int" />
+      <xs:element name="horasDisponible" type="xs:int" />
+      <xs:element name="idHorarioCiclo" type="xs:int" />
+      <xs:element minOccurs="0" name="personal" type="tns:personalCitas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciclo">
+    <xs:sequence>
+      <xs:element name="anho" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idCiclo" type="xs:int" />
+      <xs:element name="periodo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detalleHorario">
+    <xs:sequence>
+      <xs:element name="dia" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="horaFin" type="xs:int" />
+      <xs:element name="horaInicio" type="xs:int" />
+      <xs:element name="idDetalle" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personalCitas">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:miembroOOIA">
+        <xs:sequence>
+          <xs:element name="horasSemanales" type="xs:int" />
+          <xs:element name="rendimiento" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="miembroOOIA">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoPUCP" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="DNI" type="xs:string" />
+      <xs:element name="edad" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="sexo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHorarioCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horario" type="tns:horarioCiclo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHorarioCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarHorarioCiclo">
+    <xs:sequence>
+      <xs:element name="idHorarioCiclo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarHorarioCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorarioCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horario" type="tns:horarioCiclo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorarioCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

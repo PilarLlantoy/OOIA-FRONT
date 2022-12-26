@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CitaWS" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://34.231.200.155:8080/ooiasoftWebServices/CitaWS?xsd=1" namespace="http://services.ooiasoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarCitasDeAlumnoPorCicloFechaPersonal">
+    <part name="parameters" element="tns:listarCitasDeAlumnoPorCicloFechaPersonal" />
+  </message>
+  <message name="listarCitasDeAlumnoPorCicloFechaPersonalResponse">
+    <part name="parameters" element="tns:listarCitasDeAlumnoPorCicloFechaPersonalResponse" />
+  </message>
+  <message name="listarCitasDePersonalPorCicloFechaAlumno">
+    <part name="parameters" element="tns:listarCitasDePersonalPorCicloFechaAlumno" />
+  </message>
+  <message name="listarCitasDePersonalPorCicloFechaAlumnoResponse">
+    <part name="parameters" element="tns:listarCitasDePersonalPorCicloFechaAlumnoResponse" />
+  </message>
+  <message name="insertarCita">
+    <part name="parameters" element="tns:insertarCita" />
+  </message>
+  <message name="insertarCitaResponse">
+    <part name="parameters" element="tns:insertarCitaResponse" />
+  </message>
+  <message name="modificarCita">
+    <part name="parameters" element="tns:modificarCita" />
+  </message>
+  <message name="modificarCitaResponse">
+    <part name="parameters" element="tns:modificarCitaResponse" />
+  </message>
+  <message name="eliminarCita">
+    <part name="parameters" element="tns:eliminarCita" />
+  </message>
+  <message name="eliminarCitaResponse">
+    <part name="parameters" element="tns:eliminarCitaResponse" />
+  </message>
+  <message name="insertarMotivoCita">
+    <part name="parameters" element="tns:insertarMotivoCita" />
+  </message>
+  <message name="insertarMotivoCitaResponse">
+    <part name="parameters" element="tns:insertarMotivoCitaResponse" />
+  </message>
+  <message name="eliminarMotivoCita">
+    <part name="parameters" element="tns:eliminarMotivoCita" />
+  </message>
+  <message name="eliminarMotivoCitaResponse">
+    <part name="parameters" element="tns:eliminarMotivoCitaResponse" />
+  </message>
+  <message name="modificarMotivoCita">
+    <part name="parameters" element="tns:modificarMotivoCita" />
+  </message>
+  <message name="modificarMotivoCitaResponse">
+    <part name="parameters" element="tns:modificarMotivoCitaResponse" />
+  </message>
+  <message name="listarMotivosCita">
+    <part name="parameters" element="tns:listarMotivosCita" />
+  </message>
+  <message name="listarMotivosCitaResponse">
+    <part name="parameters" element="tns:listarMotivosCitaResponse" />
+  </message>
+  <portType name="CitaWS">
+    <operation name="listarCitasDeAlumnoPorCicloFechaPersonal">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/listarCitasDeAlumnoPorCicloFechaPersonalRequest" message="tns:listarCitasDeAlumnoPorCicloFechaPersonal" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/listarCitasDeAlumnoPorCicloFechaPersonalResponse" message="tns:listarCitasDeAlumnoPorCicloFechaPersonalResponse" />
+    </operation>
+    <operation name="listarCitasDePersonalPorCicloFechaAlumno">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/listarCitasDePersonalPorCicloFechaAlumnoRequest" message="tns:listarCitasDePersonalPorCicloFechaAlumno" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/listarCitasDePersonalPorCicloFechaAlumnoResponse" message="tns:listarCitasDePersonalPorCicloFechaAlumnoResponse" />
+    </operation>
+    <operation name="insertarCita">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/insertarCitaRequest" message="tns:insertarCita" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/insertarCitaResponse" message="tns:insertarCitaResponse" />
+    </operation>
+    <operation name="modificarCita">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/modificarCitaRequest" message="tns:modificarCita" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/modificarCitaResponse" message="tns:modificarCitaResponse" />
+    </operation>
+    <operation name="eliminarCita">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/eliminarCitaRequest" message="tns:eliminarCita" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/eliminarCitaResponse" message="tns:eliminarCitaResponse" />
+    </operation>
+    <operation name="insertarMotivoCita">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/insertarMotivoCitaRequest" message="tns:insertarMotivoCita" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/insertarMotivoCitaResponse" message="tns:insertarMotivoCitaResponse" />
+    </operation>
+    <operation name="eliminarMotivoCita">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/eliminarMotivoCitaRequest" message="tns:eliminarMotivoCita" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/eliminarMotivoCitaResponse" message="tns:eliminarMotivoCitaResponse" />
+    </operation>
+    <operation name="modificarMotivoCita">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/modificarMotivoCitaRequest" message="tns:modificarMotivoCita" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/modificarMotivoCitaResponse" message="tns:modificarMotivoCitaResponse" />
+    </operation>
+    <operation name="listarMotivosCita">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/listarMotivosCitaRequest" message="tns:listarMotivosCita" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/CitaWS/listarMotivosCitaResponse" message="tns:listarMotivosCitaResponse" />
+    </operation>
+  </portType>
+  <binding name="CitaWSPortBinding" type="tns:CitaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarCitasDeAlumnoPorCicloFechaPersonal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitasDePersonalPorCicloFechaAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarMotivoCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarMotivoCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarMotivoCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMotivosCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CitaWS">
+    <port name="CitaWSPort" binding="tns:CitaWSPortBinding">
+      <soap:address location="http://34.231.200.155:8080/ooiasoftWebServices/CitaWS" />
+    </port>
+  </service>
+</definitions>

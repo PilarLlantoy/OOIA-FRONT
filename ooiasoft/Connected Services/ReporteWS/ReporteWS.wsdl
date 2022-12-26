@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ReporteWS" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://34.231.200.155:8080/ooiasoftWebServices/ReporteWS?xsd=1" namespace="http://services.ooiasoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="generarReporteEventosxCiclo">
+    <part name="parameters" element="tns:generarReporteEventosxCiclo" />
+  </message>
+  <message name="generarReporteEventosxCicloResponse">
+    <part name="parameters" element="tns:generarReporteEventosxCicloResponse" />
+  </message>
+  <message name="generarReporteCitasxPersonal">
+    <part name="parameters" element="tns:generarReporteCitasxPersonal" />
+  </message>
+  <message name="generarReporteCitasxPersonalResponse">
+    <part name="parameters" element="tns:generarReporteCitasxPersonalResponse" />
+  </message>
+  <portType name="ReporteWS">
+    <operation name="generarReporteEventosxCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/ReporteWS/generarReporteEventosxCicloRequest" message="tns:generarReporteEventosxCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/ReporteWS/generarReporteEventosxCicloResponse" message="tns:generarReporteEventosxCicloResponse" />
+    </operation>
+    <operation name="generarReporteCitasxPersonal">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/ReporteWS/generarReporteCitasxPersonalRequest" message="tns:generarReporteCitasxPersonal" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/ReporteWS/generarReporteCitasxPersonalResponse" message="tns:generarReporteCitasxPersonalResponse" />
+    </operation>
+  </portType>
+  <binding name="ReporteWSPortBinding" type="tns:ReporteWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="generarReporteEventosxCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReporteCitasxPersonal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ReporteWS">
+    <port name="ReporteWSPort" binding="tns:ReporteWSPortBinding">
+      <soap:address location="http://34.231.200.155:8080/ooiasoftWebServices/ReporteWS" />
+    </port>
+  </service>
+</definitions>

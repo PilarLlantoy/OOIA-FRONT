@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarEspecialidad" type="tns:eliminarEspecialidad" />
+  <xs:element name="eliminarEspecialidadResponse" type="tns:eliminarEspecialidadResponse" />
+  <xs:element name="insertarEspecialidad" type="tns:insertarEspecialidad" />
+  <xs:element name="insertarEspecialidadResponse" type="tns:insertarEspecialidadResponse" />
+  <xs:element name="listarEspecialidadesPorNombre" type="tns:listarEspecialidadesPorNombre" />
+  <xs:element name="listarEspecialidadesPorNombreResponse" type="tns:listarEspecialidadesPorNombreResponse" />
+  <xs:element name="modificarEspecialidad" type="tns:modificarEspecialidad" />
+  <xs:element name="modificarEspecialidadResponse" type="tns:modificarEspecialidadResponse" />
+  <xs:complexType name="modificarEspecialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="especialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="idEspecialidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEspecialidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEspecialidadesPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEspecialidadesPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEspecialidad">
+    <xs:sequence>
+      <xs:element name="idEspecialidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEspecialidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEspecialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEspecialidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

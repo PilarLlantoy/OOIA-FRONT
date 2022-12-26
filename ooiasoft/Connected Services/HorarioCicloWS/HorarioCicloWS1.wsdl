@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="HorarioCicloWS" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://34.231.200.155:8080/ooiasoftWebServices/HorarioCicloWS?xsd=1" namespace="http://services.ooiasoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarHorarioCiclos">
+    <part name="parameters" element="tns:listarHorarioCiclos" />
+  </message>
+  <message name="listarHorarioCiclosResponse">
+    <part name="parameters" element="tns:listarHorarioCiclosResponse" />
+  </message>
+  <message name="modificarHorarioCiclo">
+    <part name="parameters" element="tns:modificarHorarioCiclo" />
+  </message>
+  <message name="modificarHorarioCicloResponse">
+    <part name="parameters" element="tns:modificarHorarioCicloResponse" />
+  </message>
+  <message name="eliminarHorarioCiclo">
+    <part name="parameters" element="tns:eliminarHorarioCiclo" />
+  </message>
+  <message name="eliminarHorarioCicloResponse">
+    <part name="parameters" element="tns:eliminarHorarioCicloResponse" />
+  </message>
+  <message name="insertarHorarioCiclo">
+    <part name="parameters" element="tns:insertarHorarioCiclo" />
+  </message>
+  <message name="insertarHorarioCicloResponse">
+    <part name="parameters" element="tns:insertarHorarioCicloResponse" />
+  </message>
+  <portType name="HorarioCicloWS">
+    <operation name="listarHorarioCiclos">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/HorarioCicloWS/listarHorarioCiclosRequest" message="tns:listarHorarioCiclos" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/HorarioCicloWS/listarHorarioCiclosResponse" message="tns:listarHorarioCiclosResponse" />
+    </operation>
+    <operation name="modificarHorarioCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/HorarioCicloWS/modificarHorarioCicloRequest" message="tns:modificarHorarioCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/HorarioCicloWS/modificarHorarioCicloResponse" message="tns:modificarHorarioCicloResponse" />
+    </operation>
+    <operation name="eliminarHorarioCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/HorarioCicloWS/eliminarHorarioCicloRequest" message="tns:eliminarHorarioCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/HorarioCicloWS/eliminarHorarioCicloResponse" message="tns:eliminarHorarioCicloResponse" />
+    </operation>
+    <operation name="insertarHorarioCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/HorarioCicloWS/insertarHorarioCicloRequest" message="tns:insertarHorarioCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/HorarioCicloWS/insertarHorarioCicloResponse" message="tns:insertarHorarioCicloResponse" />
+    </operation>
+  </portType>
+  <binding name="HorarioCicloWSPortBinding" type="tns:HorarioCicloWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarHorarioCiclos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarHorarioCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarHorarioCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarHorarioCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="HorarioCicloWS">
+    <port name="HorarioCicloWSPort" binding="tns:HorarioCicloWSPortBinding">
+      <soap:address location="http://34.231.200.155:8080/ooiasoftWebServices/HorarioCicloWS" />
+    </port>
+  </service>
+</definitions>

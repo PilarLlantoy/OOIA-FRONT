@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarInformacionTemaCiclo" type="tns:eliminarInformacionTemaCiclo" />
+  <xs:element name="eliminarInformacionTemaCicloResponse" type="tns:eliminarInformacionTemaCicloResponse" />
+  <xs:element name="eliminarTema" type="tns:eliminarTema" />
+  <xs:element name="eliminarTemaResponse" type="tns:eliminarTemaResponse" />
+  <xs:element name="insertarInformacionTemaCiclo" type="tns:insertarInformacionTemaCiclo" />
+  <xs:element name="insertarInformacionTemaCicloResponse" type="tns:insertarInformacionTemaCicloResponse" />
+  <xs:element name="insertarTema" type="tns:insertarTema" />
+  <xs:element name="insertarTemaResponse" type="tns:insertarTemaResponse" />
+  <xs:element name="listarInformacionesTemaCiclo" type="tns:listarInformacionesTemaCiclo" />
+  <xs:element name="listarInformacionesTemaCicloResponse" type="tns:listarInformacionesTemaCicloResponse" />
+  <xs:element name="listarTemas" type="tns:listarTemas" />
+  <xs:element name="listarTemasResponse" type="tns:listarTemasResponse" />
+  <xs:element name="modificarInformacionTemaCiclo" type="tns:modificarInformacionTemaCiclo" />
+  <xs:element name="modificarInformacionTemaCicloResponse" type="tns:modificarInformacionTemaCicloResponse" />
+  <xs:element name="modificarTema" type="tns:modificarTema" />
+  <xs:element name="modificarTemaResponse" type="tns:modificarTemaResponse" />
+  <xs:complexType name="modificarTema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tema" type="tns:tema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tema">
+    <xs:sequence>
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="idTema" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTemaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarInformacionTemaCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="infoTemaCiclo" type="tns:informacionTemaCiclo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="informacionTemaCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ciclo" type="tns:ciclo" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionUTF" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVisible" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idInformacionTemaCiclo" type="xs:int" />
+      <xs:element minOccurs="0" name="tema" type="tns:tema" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciclo">
+    <xs:sequence>
+      <xs:element name="anho" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idCiclo" type="xs:int" />
+      <xs:element name="periodo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarInformacionTemaCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarInformacionTemaCiclo">
+    <xs:sequence>
+      <xs:element name="idInfoTemaCiclo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarInformacionTemaCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTemas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTemasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTema">
+    <xs:sequence>
+      <xs:element name="idTema" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTemaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarInformacionTemaCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="infoTemaCiclo" type="tns:informacionTemaCiclo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarInformacionTemaCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tema" type="tns:tema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTemaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarInformacionesTemaCiclo">
+    <xs:sequence>
+      <xs:element name="idCiclo" type="xs:int" />
+      <xs:element name="idTema" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarInformacionesTemaCicloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:informacionTemaCiclo" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

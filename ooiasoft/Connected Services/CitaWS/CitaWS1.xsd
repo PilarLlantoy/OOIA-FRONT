@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarCita" type="tns:eliminarCita" />
+  <xs:element name="eliminarCitaResponse" type="tns:eliminarCitaResponse" />
+  <xs:element name="eliminarMotivoCita" type="tns:eliminarMotivoCita" />
+  <xs:element name="eliminarMotivoCitaResponse" type="tns:eliminarMotivoCitaResponse" />
+  <xs:element name="insertarCita" type="tns:insertarCita" />
+  <xs:element name="insertarCitaResponse" type="tns:insertarCitaResponse" />
+  <xs:element name="insertarMotivoCita" type="tns:insertarMotivoCita" />
+  <xs:element name="insertarMotivoCitaResponse" type="tns:insertarMotivoCitaResponse" />
+  <xs:element name="listarCitasDeAlumnoPorCicloFechaPersonal" type="tns:listarCitasDeAlumnoPorCicloFechaPersonal" />
+  <xs:element name="listarCitasDeAlumnoPorCicloFechaPersonalResponse" type="tns:listarCitasDeAlumnoPorCicloFechaPersonalResponse" />
+  <xs:element name="listarCitasDePersonalPorCicloFechaAlumno" type="tns:listarCitasDePersonalPorCicloFechaAlumno" />
+  <xs:element name="listarCitasDePersonalPorCicloFechaAlumnoResponse" type="tns:listarCitasDePersonalPorCicloFechaAlumnoResponse" />
+  <xs:element name="listarMotivosCita" type="tns:listarMotivosCita" />
+  <xs:element name="listarMotivosCitaResponse" type="tns:listarMotivosCitaResponse" />
+  <xs:element name="modificarCita" type="tns:modificarCita" />
+  <xs:element name="modificarCitaResponse" type="tns:modificarCitaResponse" />
+  <xs:element name="modificarMotivoCita" type="tns:modificarMotivoCita" />
+  <xs:element name="modificarMotivoCitaResponse" type="tns:modificarMotivoCitaResponse" />
+  <xs:complexType name="eliminarCita">
+    <xs:sequence>
+      <xs:element name="idCita" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitasDePersonalPorCicloFechaAlumno">
+    <xs:sequence>
+      <xs:element name="idPersonal" type="xs:int" />
+      <xs:element minOccurs="0" name="ciclo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaIni" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nombreAlumno" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitasDePersonalPorCicloFechaAlumnoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element name="asistio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ciclo" type="tns:ciclo" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaAtencion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="hora" type="xs:int" />
+      <xs:element name="idCita" type="xs:int" />
+      <xs:element minOccurs="0" name="motivoCita" type="tns:motivoCita" />
+      <xs:element minOccurs="0" name="personalCitas" type="tns:personalCitas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alumno">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element name="CRAEST" type="xs:double" />
+          <xs:element name="cantCiclos" type="xs:int" />
+          <xs:element name="cantCursosAprobados" type="xs:int" />
+          <xs:element name="cantidadCreditosAprobados" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ciclos" nillable="true" type="tns:alumnoCiclo" />
+          <xs:element name="escalaPago" type="xs:int" />
+          <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+          <xs:element name="promedioPonderado" type="xs:double" />
+          <xs:element minOccurs="0" name="tipo" type="tns:tipoAlumno" />
+          <xs:element name="totalCreditos" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoPUCP" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="DNI" type="xs:string" />
+      <xs:element name="edad" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="sexo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alumnoCiclo">
+    <xs:sequence>
+      <xs:element name="CRAEST" type="xs:double" />
+      <xs:element name="cantidadCursosAprobados" type="xs:int" />
+      <xs:element minOccurs="0" name="ciclo" type="tns:ciclo" />
+      <xs:element name="creditosAprobados" type="xs:double" />
+      <xs:element name="creditosTotales" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursos" nillable="true" type="tns:alumnoCursoCiclo" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="idAlumnoCiclo" type="xs:int" />
+      <xs:element name="promedioPonderado" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciclo">
+    <xs:sequence>
+      <xs:element name="anho" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idCiclo" type="xs:int" />
+      <xs:element name="periodo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alumnoCursoCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element minOccurs="0" name="escala" type="tns:tipoECTS" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="evaluaciones" nillable="true" type="tns:evaluacion" />
+      <xs:element name="idAlumnoCursoCiclo" type="xs:int" />
+      <xs:element name="notaFinal" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element name="creditos" type="xs:double" />
+      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="especialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="idEspecialidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comentarios" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="idEvaluacion" type="xs:int" />
+      <xs:element name="nota" type="xs:int" />
+      <xs:element name="numEvaluacion" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoEvaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="motivoCita">
+    <xs:sequence>
+      <xs:element name="abreviatura" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="idMotivo" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoCita" type="tns:tipoCita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personalCitas">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:miembroOOIA">
+        <xs:sequence>
+          <xs:element name="horasSemanales" type="xs:int" />
+          <xs:element name="rendimiento" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="miembroOOIA">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="insertarMotivoCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="motivoCita" type="tns:motivoCita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMotivoCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMotivosCita">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarMotivosCitaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:motivoCita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMotivoCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="motivoCita" type="tns:motivoCita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMotivoCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitasDeAlumnoPorCicloFechaPersonal">
+    <xs:sequence>
+      <xs:element name="idAlumno" type="xs:int" />
+      <xs:element minOccurs="0" name="ciclo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaIni" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nombrePersonal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitasDeAlumnoPorCicloFechaPersonalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMotivoCita">
+    <xs:sequence>
+      <xs:element name="idMotivoCita" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMotivoCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoECTS">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A" />
+      <xs:enumeration value="B" />
+      <xs:enumeration value="C" />
+      <xs:enumeration value="D" />
+      <xs:enumeration value="E" />
+      <xs:enumeration value="FX" />
+      <xs:enumeration value="F" />
+      <xs:enumeration value="NT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoEvaluacion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PA" />
+      <xs:enumeration value="PB" />
+      <xs:enumeration value="EX" />
+      <xs:enumeration value="TA" />
+      <xs:enumeration value="PC" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoAlumno">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Regular" />
+      <xs:enumeration value="NoRegular" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoCita">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Psicologico" />
+      <xs:enumeration value="Academico" />
+      <xs:enumeration value="Vocacional" />
+      <xs:enumeration value="Reintegracion" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

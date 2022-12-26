@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EventoCicloWS" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://34.231.200.155:8080/ooiasoftWebServices/EventoCicloWS?xsd=1" namespace="http://services.ooiasoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarEventoCiclosParaAdministrativo">
+    <part name="parameters" element="tns:listarEventoCiclosParaAdministrativo" />
+  </message>
+  <message name="listarEventoCiclosParaAdministrativoResponse">
+    <part name="parameters" element="tns:listarEventoCiclosParaAdministrativoResponse" />
+  </message>
+  <message name="listarEventoCiclosInscritosParaAlumno">
+    <part name="parameters" element="tns:listarEventoCiclosInscritosParaAlumno" />
+  </message>
+  <message name="listarEventoCiclosInscritosParaAlumnoResponse">
+    <part name="parameters" element="tns:listarEventoCiclosInscritosParaAlumnoResponse" />
+  </message>
+  <message name="listarEventoCiclosNoInscritosParaAlumno">
+    <part name="parameters" element="tns:listarEventoCiclosNoInscritosParaAlumno" />
+  </message>
+  <message name="listarEventoCiclosNoInscritosParaAlumnoResponse">
+    <part name="parameters" element="tns:listarEventoCiclosNoInscritosParaAlumnoResponse" />
+  </message>
+  <message name="insertarEventoCiclo">
+    <part name="parameters" element="tns:insertarEventoCiclo" />
+  </message>
+  <message name="insertarEventoCicloResponse">
+    <part name="parameters" element="tns:insertarEventoCicloResponse" />
+  </message>
+  <message name="inscribirAlumnoEventoCiclo">
+    <part name="parameters" element="tns:inscribirAlumnoEventoCiclo" />
+  </message>
+  <message name="inscribirAlumnoEventoCicloResponse">
+    <part name="parameters" element="tns:inscribirAlumnoEventoCicloResponse" />
+  </message>
+  <message name="modificarEventoCiclo">
+    <part name="parameters" element="tns:modificarEventoCiclo" />
+  </message>
+  <message name="modificarEventoCicloResponse">
+    <part name="parameters" element="tns:modificarEventoCicloResponse" />
+  </message>
+  <message name="eliminarEventoCiclo">
+    <part name="parameters" element="tns:eliminarEventoCiclo" />
+  </message>
+  <message name="eliminarEventoCicloResponse">
+    <part name="parameters" element="tns:eliminarEventoCicloResponse" />
+  </message>
+  <message name="desinscribirAlumnoEventoCiclo">
+    <part name="parameters" element="tns:desinscribirAlumnoEventoCiclo" />
+  </message>
+  <message name="desinscribirAlumnoEventoCicloResponse">
+    <part name="parameters" element="tns:desinscribirAlumnoEventoCicloResponse" />
+  </message>
+  <portType name="EventoCicloWS">
+    <operation name="listarEventoCiclosParaAdministrativo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/listarEventoCiclosParaAdministrativoRequest" message="tns:listarEventoCiclosParaAdministrativo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/listarEventoCiclosParaAdministrativoResponse" message="tns:listarEventoCiclosParaAdministrativoResponse" />
+    </operation>
+    <operation name="listarEventoCiclosInscritosParaAlumno">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/listarEventoCiclosInscritosParaAlumnoRequest" message="tns:listarEventoCiclosInscritosParaAlumno" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/listarEventoCiclosInscritosParaAlumnoResponse" message="tns:listarEventoCiclosInscritosParaAlumnoResponse" />
+    </operation>
+    <operation name="listarEventoCiclosNoInscritosParaAlumno">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/listarEventoCiclosNoInscritosParaAlumnoRequest" message="tns:listarEventoCiclosNoInscritosParaAlumno" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/listarEventoCiclosNoInscritosParaAlumnoResponse" message="tns:listarEventoCiclosNoInscritosParaAlumnoResponse" />
+    </operation>
+    <operation name="insertarEventoCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/insertarEventoCicloRequest" message="tns:insertarEventoCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/insertarEventoCicloResponse" message="tns:insertarEventoCicloResponse" />
+    </operation>
+    <operation name="inscribirAlumnoEventoCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/inscribirAlumnoEventoCicloRequest" message="tns:inscribirAlumnoEventoCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/inscribirAlumnoEventoCicloResponse" message="tns:inscribirAlumnoEventoCicloResponse" />
+    </operation>
+    <operation name="modificarEventoCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/modificarEventoCicloRequest" message="tns:modificarEventoCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/modificarEventoCicloResponse" message="tns:modificarEventoCicloResponse" />
+    </operation>
+    <operation name="eliminarEventoCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/eliminarEventoCicloRequest" message="tns:eliminarEventoCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/eliminarEventoCicloResponse" message="tns:eliminarEventoCicloResponse" />
+    </operation>
+    <operation name="desinscribirAlumnoEventoCiclo">
+      <input wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/desinscribirAlumnoEventoCicloRequest" message="tns:desinscribirAlumnoEventoCiclo" />
+      <output wsam:Action="http://services.ooiasoft.pucp.edu.pe/EventoCicloWS/desinscribirAlumnoEventoCicloResponse" message="tns:desinscribirAlumnoEventoCicloResponse" />
+    </operation>
+  </portType>
+  <binding name="EventoCicloWSPortBinding" type="tns:EventoCicloWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarEventoCiclosParaAdministrativo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEventoCiclosInscritosParaAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEventoCiclosNoInscritosParaAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEventoCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="inscribirAlumnoEventoCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEventoCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEventoCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="desinscribirAlumnoEventoCiclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EventoCicloWS">
+    <port name="EventoCicloWSPort" binding="tns:EventoCicloWSPortBinding">
+      <soap:address location="http://34.231.200.155:8080/ooiasoftWebServices/EventoCicloWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.ooiasoft.pucp.edu.pe/" targetNamespace="http://services.ooiasoft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarCiclo" type="tns:eliminarCiclo" />
+  <xs:element name="eliminarCicloResponse" type="tns:eliminarCicloResponse" />
+  <xs:element name="insertarCiclo" type="tns:insertarCiclo" />
+  <xs:element name="insertarCicloResponse" type="tns:insertarCicloResponse" />
+  <xs:element name="listarCiclos" type="tns:listarCiclos" />
+  <xs:element name="listarCiclosResponse" type="tns:listarCiclosResponse" />
+  <xs:element name="modificarCiclo" type="tns:modificarCiclo" />
+  <xs:element name="modificarCicloResponse" type="tns:modificarCicloResponse" />
+  <xs:complexType name="listarCiclos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCiclosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ciclo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciclo">
+    <xs:sequence>
+      <xs:element name="anho" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idCiclo" type="xs:int" />
+      <xs:element name="periodo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCiclo">
+    <xs:sequence>
+      <xs:element name="idCiclo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ciclo" type="tns:ciclo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCiclo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ciclo" type="tns:ciclo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCicloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
